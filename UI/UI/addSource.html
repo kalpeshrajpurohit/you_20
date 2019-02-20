@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<style type="text/css">
+	
+	.source_main_form {
+		border: 1px solid #D8D8D8;
+		border-radius: 5px;
+		padding: 2rem 3rem;
+		margin: 4rem 0rem 2rem;
+		background-color: #E4E4E4;
+		box-shadow: -1px 4px 15px 0px rgba(136, 136, 136, 0.46);
+	}
+	
+	.source_main_form h1 {
+		text-align: center;
+		font-size: 30px;
+		padding-bottom: 3rem;
+	}
+
+	.modal_input_form {
+		position: relative;
+	}
+	.modal_input_form input:focus ~ .floating-label,
+	.modal_input_form select:focus ~ .floating-label,
+	.modal_input_form select:not(:focus):valid ~ .floating-label,
+	.modal_input_form input:not(:focus):valid ~ .floating-label{
+	    top: 14px;
+	    bottom: 10px;
+	    left: 10px;
+	    font-size: 12px;
+	    color: rgba(70,90,110,0.6);
+	}
+
+	.modal_inputText {
+	  font-size: 14px;
+	  width: 100%;
+	  color: #000000;
+	  padding: 28px 0px 7px 10px;
+	  font-size: 16px;
+	  border:1px solid #D8D8D8;
+	  border-radius: 5px;
+	  margin-bottom: 20px;
+	}
+
+	.floating-label {
+	  position: absolute;
+	  pointer-events: none;
+	  left: 10px;
+	  top: 20px;
+	  font-size: 16px;
+	  color: rgba(80,90,110,0.7);
+	  transition: 0.2s ease all;
+	}
+
+	.input_box {
+		float: left;
+		position: relative;
+		width: 100%;
+	}
+
+	.customDropDown {
+		padding: 0px 0px 5px 0px !important;
+	    width: 45%;
+	    text-align: left !important;
+	    margin-bottom: 20px !important;
+	    margin-right: 16px;
+	    float: left;
+	}
+
+	.customRadio {
+		padding: 0px 0px 5px 0px !important;
+	    width: 45%;
+	    text-align: left !important;
+	    margin-bottom: 20px !important;
+	    margin-right: 16px;
+	    float: left;
+	}
+
+	[type="radio"]:checked,
+	[type="radio"]:not(:checked) {
+	    position: absolute;
+	    left: -9999px;
+	}
+	[type="radio"]:checked + label,
+	[type="radio"]:not(:checked) + label
+	{
+	    position: relative;
+	    padding-left: 28px;
+	    cursor: pointer;
+	    line-height: 20px;
+	    display: inline-block;
+	    color: #666;
+	}
+	[type="radio"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 18px;
+	    height: 18px;
+	    border: 1px solid #ddd;
+	    border-radius: 0%;
+	    background: #fff;
+	}
+	[type="radio"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after {
+	    content: '';
+	   	width: 10px;
+	    height: 10px;
+	    background: #000;
+	    position: absolute;
+	    top: 4px;
+	    left: 4px;
+	    border-radius: 100%;
+	    -webkit-transition: all 0.2s ease;
+	    transition: all 0.2s ease;
+	}
+	[type="radio"]:not(:checked) + label:after {
+	    opacity: 0;
+	    -webkit-transform: scale(0);
+	    transform: scale(0);
+	}
+	[type="radio"]:checked + label:after {
+	    opacity: 1;
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	}
+
+	.parent_section_div, .child_section_div {
+		 width: 100%;
+		 float:left;
+	}
+
+	.customButton {
+		padding: 8px 22px !important;
+		margin: 0px 20px 0px 0px;
+	}
+
+</style>
+
+<body>
+
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="all">
+<link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/font_apply.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/bootstrap-datepicker.css" rel="stylesheet">
+<link href="assets/css/jquery-confirm.css" rel="stylesheet">
+
+	<nav class="navbar">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>		 
+		  </div>
+		  <div id="navbar" class="navbar-collapse collapse">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#" style="color: #fff;">Home</a></li>
+		      <li><a href="#" style="color: #fff;">Help</a></li>          
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">         
+		      <li><a href="../navbar-static-top/" style="color: #fff;">Sign in</a></li>
+		      <li><a href="../navbar-fixed-top/" style="color: #fff;">Register</a></li>
+		    </ul>
+		  </div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+	</nav>
+
+	<div class="container-fluid bottom_nav">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" class="">
+		<a href=""><img src="assets/img/Logo.png" class="img-responsive"></a>
+		</div>		
+	</div>
+
+	<script src="assets/js/jquery-2.2.3.min.js"></script>
+	<!--======= Bootstrap =========-->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/dataTables.bootstrap.min.js"></script>
+
+	<div class="container margin_top">
+		<form method="post" action="sourcesList.html">
+	    <div class="row">
+		    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+		    	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 source_main_form">
+		    	<a href="sourcesList.html"><i class="fa fa-arrow-left fa-lg pull-left" style="position: relative;top: 3px;" aria-hidden="true"></i>Back</a>
+		    		<h1>Add Source</h1>
+			    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    		<div class="modal_input_form">
+							<div class="input_box">
+					  			<input type="text" class="modal_inputText" name="sourceId" id="sourceId" required="" value="XS"/>
+					  			<span class="floating-label">sourceId*</span>
+							</div>
+						</div>
+
+						<div class="modal_input_form">
+							<div class="input_box">
+					  			<input type="text" class="modal_inputText" name="shortName" id="shortName" required="" />
+					  			<span class="floating-label">shortName*</span>
+							</div>
+						</div>
+			    	</div>
+			    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="modal_input_form">
+							<div class="input_box">
+					  			<input type="text" class="modal_inputText" name="name" id="name" required="" />
+					  			<span class="floating-label">name*</span>
+							</div>
+						</div>
+
+						<div class="modal_input_form">
+							<div class="input_box">
+					  			<input type="text" class="modal_inputText" name="intervalValue" id="intervalValue" required="" />
+					  			<span class="floating-label">Default Interval value*</span>
+							</div>
+						</div>					
+		    		</div>
+
+		    		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		    			<div class="form-group" >
+						   <label for="sel1">Public:</label>
+						</div>
+		    			<div class="form-group" style="float: left;">
+						  	<input type="radio" id="public_true" name="radio-group-public" checked>
+	    					<label for="public_true">true</label>
+						</div>
+						<div class="form-group" style="float: left;margin-left: 30px;">
+						  	<input type="radio" id="public_false" name="radio-group-public">
+	    					<label for="public_false">false</label>
+						</div>			
+		    		</div>
+
+		    		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		    			<div class="form-group customDropDown">
+						  <label for="type">Type:</label>
+						  <select class="form-control" id="type" name="type" required="">
+						    <option value="">Select</option>
+						    <option value="BIP">BIP</option>
+						    <option value="REG">REG</option>
+						  </select>
+						</div>
+
+						<div class="form-group customDropDown">
+						  <label for="intervalType">Interval Type:</label>
+						  <select class="form-control" id="intervalType" name="intervalType" required>
+						    <option>Select</option>
+						    <option value="I">I</option>
+						    <option value="W">W</option>
+						    <option value="M">M</option>
+						    <option value="Q">Q</option>
+						    <option value="H">H</option>
+						    <option value="Y">Y</option>
+						  </select>
+						</div>				
+		    		</div>    			    		
+		    	</div> 
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>  
+		    </div>	
+		</div>
+
+		<div class="row">
+		    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			    	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 source_main_form" style="margin: 0rem 0rem 2rem">
+			    		<h1>Parent Sections List</h1>
+			    		<div class="parent_section_div" id='div_1'>
+						    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<div class="modal_input_form">
+									<div class="input_box">
+							  			<input type="text" class="modal_inputText" name="sectionName" id="sectionName" required />
+							  			<span class="floating-label">name*</span>
+									</div>
+								</div>
+							</div>	
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<div class="form-group">
+								  <label for="qualityLevel">Quality Level:</label>
+								  <select class="form-control" id="qualityLevel" name="qualityLevel">
+								  	<option>Select</option>
+								    <option value="1">1</option>
+								    <option value="2">2</option>
+								    <option value="3">3</option>
+								    <option value="4">4</option>
+								    <option value="5">5</option>
+								    <option value="6">6</option>
+								    <option value="7">7</option>
+								    <option value="8">8</option>
+								    <option value="9">9</option>
+								  </select>
+								</div>		
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<div class="form-group" >
+								   <label for="Validated">Validated:</label>
+								</div>
+				    			<div class="form-group" style="float: left;">
+								   	<input type="radio" id="validated_true_1" name="radio-group-1" checked>
+		    						<label for="validated_true_1">true</label>
+								</div>
+								<div class="form-group" style="float: left;margin-left: 20px;">
+								   	<input type="radio" id="validated_false_1" name="radio-group-1">
+		    						<label for="validated_false_1">false</label>
+								</div>
+
+								<button type="button" class="btn pull-right add_parent_section" id="" style="position: relative;top: -7px;color: green; background-color: #FFF;"><i class="fa fa-plus"></i></button>		
+				    		</div>
+			    		</div>		    	  			    		
+			    	</div> 
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>  
+		    </div>	
+		</div>
+
+		<div class="row">
+		    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			    	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 source_main_form" style="margin: 0rem 0rem 2rem">
+			    		<h1>Child Sections List</h1>
+			    		<div class="child_section_div" id='child_div_1'>
+						    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<div class="modal_input_form">
+									<div class="input_box">
+							  			<input type="text" class="modal_inputText" name="childSectionName" id="childSectionName" required />
+							  			<span class="floating-label">name*</span>
+									</div>
+								</div>
+							</div>	
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+								<div class="form-group">
+								  <label for="childQualityLevel">Quality Level:</label>
+								  <select class="form-control" id="childQualityLevel" name="childQualityLevel" required>
+								    <option>Select</option>
+								    <option value="1">1</option>
+								    <option value="2">2</option>
+								    <option value="3">3</option>
+								    <option value="4">4</option>
+								    <option value="5">5</option>
+								    <option value="6">6</option>
+								    <option value="7">7</option>
+								    <option value="8">8</option>
+								    <option value="9">9</option>
+								  </select>
+								</div>		
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<div class="form-group" >
+								   <label for="Validated">Validated:</label>
+								</div>
+				    			<div class="form-group" style="float: left;">
+								   	<input type="radio" id="child_validated_true_1" name="child-radio-group-1" checked>
+		    						<label for="child_validated_true_1">true</label>
+								</div>
+								<div class="form-group" style="float: left;margin-left: 20px;">
+								   	<input type="radio" id="child_validated_false_1" name="child-radio-group-1">
+		    						<label for="child_validated_false_1">false</label>
+								</div>
+
+								<button type="button" class="btn pull-right add_child_section" id="" style="position: relative;top: -7px;color: green; background-color: #FFF;"><i class="fa fa-plus"></i></button>		
+				    		</div>
+			    		</div>		    	  			    		
+			    	</div> 
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>  
+		    </div>	
+		</div>
+
+		<div class="row">
+		    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			    	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center source_main_form" style="margin: 0rem 0rem 2rem">
+			    		<a href="sourcesList.html"><button type="button" class="btn btn-danger customButton">Cancel</button></a>
+			    		<button type="submit" class="btn btn-success customButton">Save</button>
+			    	</div> 
+		    	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>  
+		    </div>	
+		</div>
+		</form>
+	</div>
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$(".add_parent_section").click(function() {
+
+		var total_element = $(".parent_section_div").length;
+		var lastid = $(".parent_section_div:last").attr("id");
+		var split_id = lastid.split("_");
+		var currentIndex = Number(split_id[1]);
+		var nextindex = Number(split_id[1]) + 1;
+
+		var max = 10;
+
+		if(total_element < max ) {
+
+			$(".parent_section_div:last").after("<div class='parent_section_div' id='div_"+ nextindex +"'></div>");
+				
+			var temp = $("#div_" + currentIndex).html();
+
+			var replace = "validated_true_"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"validated_true_"+nextindex);
+
+			var replace = "validated_false_"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"validated_false_"+nextindex);
+
+			temp = temp.replace("plus","trash");
+			temp = temp.replace("add_parent_section","remove_parent_section");
+
+
+			var replace = "radio-group-"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"radio-group-"+nextindex);
+
+			$("#div_" + nextindex).append(temp);	
+		}
+
+	});
+
+	
+	$('.container').on('click','.remove_parent_section',function(){
+
+		var id =$(this).parent().parent().closest('div').attr('id');
+		$("#"+id).remove();
+
+	});
+
+	$(".add_child_section").click(function() {
+
+		var total_element = $(".child_section_div").length;
+		var lastid = $(".child_section_div:last").attr("id");
+		var split_id = lastid.split("_");
+		var currentIndex = Number(split_id[2]);
+		var nextindex = Number(split_id[2]) + 1;
+
+		var max = 10;
+
+		if(total_element < max ) {
+
+			$(".child_section_div:last").after("<div class='child_section_div' id='child_div_"+ nextindex +"'></div>");
+				
+			var temp = $("#child_div_" + currentIndex).html();
+
+			var replace = "child_validated_true_"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"child_validated_true_"+nextindex);
+
+			var replace = "child_validated_false_"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"child_validated_false_"+nextindex);
+
+			temp = temp.replace("plus","trash");
+			temp = temp.replace("add_child_section","remove_child_section");
+
+
+			var replace = "child-radio-group-"+currentIndex;
+			var re = new RegExp(replace,"g");
+			temp = temp.replace(re,"child-radio-group-"+nextindex);
+
+			$("#child_div_" + nextindex).append(temp);	
+		}
+
+	});
+
+	
+	$('.container').on('click','.remove_child_section',function(){
+
+		var id =$(this).parent().parent().closest('div').attr('id');
+		$("#"+id).remove();
+
+	});
+
+});
+
+</script>
+
+</body>
+</html>
