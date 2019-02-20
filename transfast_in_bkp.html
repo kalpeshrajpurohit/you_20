@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	</head>
+<style type="text/css">
+
+
+@font-face {
+    font-family: "iconfont";
+    src: url("iconfont.eot?t=1519919520638"); /* IE9*/
+    src: url("iconfont.eot?t=1519919520638#iefix") format("embedded-opentype"),
+        url("data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAT8AAsAAAAAB0wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kgPY21hcAAAAYAAAABeAAABhpnMBr5nbHlmAAAB4AAAAS8AAAE4GE3xD2hlYWQAAAMQAAAALwAAADYQm8k2aGhlYQAAA0AAAAAcAAAAJAfeA4RobXR4AAADXAAAAAwAAAAMC+kAAGxvY2EAAANoAAAACAAAAAgAdgCcbWF4cAAAA3AAAAAfAAAAIAESAF1uYW1lAAADkAAAAUUAAAJtPlT+fXBvc3QAAATYAAAAIgAAADPZhex6eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sE4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDxTZW7438AQw9zA0AAUZgTJAQAmGwyReJzFkMENgDAMAy9t6QOxRiUeDMSLOTpx1ygmlAcT1JJjxbGUKMACRPEQE9iF8eCUa+5HVveTZ7LUCNRWelf/qSKaZdegkpkGm7f6j83rPjp9hTqoE1t5SbgBrLcMIwAAeJwVjD1Lw1AYhe97r7lJbtLE3nynSZsP26tUC8ZYB7FdXBQHwamjIDjp4NKlhQ4KDg7udRLBX+BW8LeI/o5oPBweeDhwkITQ7xdZER9ZaBPtomN0jhDQPmQGjiEV5QD3wUklx7MNInKRynk2IEfgZdR2i2HZ86hMTTCgDXtpMRQDLGC/HOFDKNwYIGiFF7wbcfIMzBfth+oUv4LTySNztFOdbI/tIrGUqc55wPmTQiVJwXjNNODGc1VJZbR6k8zQWXW2cAf0QIRnk0bS4peP5W3c9VSAxQKsVmK8j5ths+4sdC0eyOsNxQ8b+YYN0x/Nt/S4943qwD/IJ75DzVp6mazWoLYHbnEAw5J8aJFWzau5FjkMllqsw5Lha8aqGdwzp96uGIMXLapf/gAZTTBEAHicY2BkYGAA4rxVF67H89t8ZeBmYQCBa/ucFiDo/w9ZGJglgFwOBiaQKABVfgtlAHicY2BkYGBu+N/AEMPCAAJAkpEBFTADAEcJAmwEAAAAA+kAAAQAAAAAAAAAAHYAnHicY2BkYGBgZghkYGUAASYg5gJCBob/YD4DABD3AXAAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAmZGJkZmRhYGxgjWxqCi/nIEBABIwAsUAAA==")
+            format("woff"),
+        url("iconfont.ttf?t=1519919520638") format("truetype"),
+        url("iconfont.svg?t=1519919520638#iconfont") format("svg"); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_new:before {
+    content: "\e625";
+}
+
+
+
+
+
+#office_transfat_datalist.active #office_transfast_datalist-ul {
+    display: block;
+}
+
+
+#office_transfast_datalist-input {
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: none;
+    outline: 0;
+    background: none;
+    color: #2C8BCA;
+    font-size: 52px;
+    padding:0 !important;
+
+}
+
+#office_transfat_datalist.active .use_arrow_icon {
+    transform: rotate(0.5turn);
+}
+
+#office_transfast_datalist-ul {
+    display: none;
+    position: relative;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0px auto !important;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+    padding: 0em 4em 0em 4em;
+}
+
+#office_transfast_datalist-ul li {
+    display: inline;
+    text-align: left;
+    padding: 10px 5px 10px 10px;
+    color: #999;
+    cursor: pointer;
+}
+
+#office_transfast_datalist-ul li:hover {
+    background: #4ebbf0;
+    color: #fff;
+}
+
+#office_transfat_datalist.active .input_flag {
+    display: none;
+    
+
+}
+
+#office_transfat_datalist
+{
+     transition:  20s;
+}
+
+#office_transfat_datalist.active .county_label{
+   text-indent: 12px;
+   transition: 1s;
+}
+
+.input_flag {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+   
+}
+
+.county_label{
+    color: #505A6E;
+    position: absolute;
+    left: 0px;
+    font-size: 12px;
+    top: 12px;
+    text-indent: 60px;
+    line-height: 16px;
+    opacity: 0.84;
+    opacity: 0.54;
+
+}
+.county_label::after {
+    top: 1px;
+    content: '*';
+    position: absolute;
+    right: -9px;
+}
+
+#office_transfat_datalist
+{
+    position: relative;
+}
+
+#office_transfast_datalist-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #2C8BCA;
+    opacity: 1; /* Firefox */
+}
+
+.top_county_flag {
+    position: absolute !important;
+    top: 0rem !important;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 10px 0px 3px 0px !important;
+    text-align: left;
+    box-shadow: none !important;
+    height: 99px !important;
+}
+
+.top_county_flag p
+{
+    color: #505A6E;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 7px 0 0px 0;
+    line-height: normal;
+    text-indent: 11px;
+    text-align: left;
+}
+.not_find_country {
+    padding: 0px 0px 0px 0px !important;
+    margin: 1px 0px 0px 0px !important;
+    border-top: 1px solid #D8D8D8;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14) !important;
+    text-align: left;
+    text-indent:10px;
+    height: 52px !important;
+    overflow: hidden !important;
+}
+
+
+
+.office_transfat_select_country{
+  position:relative;
+  display:inline;
+  width: 100%;
+}
+
+.office_transfast_in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round_flag img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0px 10px 10px;
+}
+.round_flag
+{
+    text-decoration: none;
+}
+
+
+.input_max_width {
+    
+    align-self: center;
+    min-width: 80px;
+    max-width: 500px;
+}
+   .office_country_list_flag_found {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: left;
+    text-align-last: center; 
+
+}
+
+.top_county_flag::before {
+    content: '';
+    position: absolute;
+    border-top: 1px solid #505A6E;
+    right: 0;
+    /* left: 0; */
+    top: 0px;
+}
+
+#office_transfast_datalist-ul li a {
+	display: inline-block;
+    text-align: center;
+    padding: 2em 4em 2em 4em;
+}
+
+#office_transfast_datalist-ul li a img{
+	width: 25px;
+    height: 25px;
+    object-fit: cover;
+    position: relative;
+    top: 2px;
+    border-radius: 50px;
+}
+
+#office_transfast_datalist-ul li a span{
+	display: block;
+}
+
+.office_icon{
+	font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+</style>
+<body>
+
+
+
+    <div class="office_transfast_in" style="text-align: center;">
+             <div class="office_transfat_select_country">
+                   <div id="office_transfat_datalist" class="overlay_btn_type_head">
+                    <span  style="font-size: 52px; color: #505A6E;">Transfast in</span>
+                    <input type="hidden" class="input_max_width width-dynamic proba dva"  id="selectedCountry" value="enter country">
+                    <input id="office_transfast_datalist-input" class="input_max_width width-dynamic proba dva" autocomplete="off"  type="text"  placeholder="enter country" value="india">
+                    <i id="office_transfast_datalist-icon" class="icon iconfont icon-arrow_new use_arrow_icon office_icon"></i>
+                        
+                        <div class="office_country_list_flag_found">
+                            <ul id="office_transfast_datalist-ul">
+                            </ul>
+                        </div>
+                   </div>
+                </div>
+    </div>
+
+<h1>new York</h1>
+
+
+</body>
+
+<script src="https://dev.transfast.com/hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>
+<script>
+
+ var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var office_transfat_datalist = function () {
+    function office_transfat_datalist(containerId, inputId, listId, options) {_classCallCheck(this, office_transfat_datalist);
+        this.containerId = containerId;
+        this.inputId = inputId;
+        this.listId = listId;
+        this.options = options;
+    }_createClass(office_transfat_datalist, [{ key: "create", value: function create()
+
+        {var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+            var list = document.getElementById(this.listId);
+            var filterOptions = this.options.filter(
+           function (d) {return filter === "" || d.text.toUpperCase().includes(filter.toUpperCase());});
+
+
+            if (filterOptions.length === 0) {
+                list.classList.remove("active");
+            } else {
+                list.classList.add("active");
+            }
+
+            list.innerHTML = filterOptions.
+            map(function (o) {return "<li id=" + o.value + ">" + o.text + "</li>";}).
+            join("");
+        } }, { key: "addListeners", value: function addListeners(
+
+        office_transfat_datalist) {var _this = this;
+            var container = document.getElementById(this.containerId);
+            var input = document.getElementById(this.inputId);
+            var list = document.getElementById(this.listId);
+            container.addEventListener("click", function (e) {
+
+                
+                if (e.target.id === _this.inputId) {
+                    $('#office_transfast_datalist-input').val('');
+                    container.classList.toggle("active");
+                } else if (e.target.id === "office_transfast_datalist-icon") {
+                    container.classList.toggle("active");
+                    input.focus();
+                }
+            });
+
+            input.addEventListener("input", function (e) {
+                if (!container.classList.contains("active")) {
+                    container.classList.add("active");
+                }
+
+                office_transfat_datalist.create(input.value);
+               
+            });
+
+            list.addEventListener("click", function (e) {
+                if (e.target.nodeName.toLocaleLowerCase() === "li") {
+                    $('#selectedCountry').val(e.target.innerText);
+                    input.value = e.target.innerText;
+                    // document.getElementById('country_icon').src = e.target.firstChild.getAttribute("src");
+
+                    container.classList.remove("active");
+                }
+            });
+        } }]);return office_transfat_datalist;}();
+
+
+
+
+
+
+
+var data = [
+
+{ value: "1", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Afghanistan.png' alt='Flag of Afghanistan'><span>Afghanistan</span></a>" },
+
+{ value: "2", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Malaysia.png'><span>united states of america</span></a>" },
+
+{ value: "3", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Argentina.png'><span>Argentina<span></a>" },
+
+{ value: "4", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Bahamas.png'><span>India</span></a>" },
+
+{ value: "5", text: "<a href='#'><img src='https://cdn2.hubspot.net/hub/1676180/hubfs/Infosite%20Assets/Images/Philippines.png?t=1542316380590&width=1440&name=Philippines.png'><span>South Africa</span></a>" },
+
+{ value: "6", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Afghanistan.png' alt='Flag of Afghanistan'><span>Afghanistan</span></a>" },
+
+{ value: "7", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Malaysia.png'><span>united states of america</span></a>" },
+
+{ value: "8", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Argentina.png'><span>Argentina<span></a>" },
+
+{ value: "9", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Bahamas.png'><span>India</span></a>" },
+
+{ value: "10", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Bahamas.png'><span>India</span></a>" },
+
+{ value: "11", text: "<a href='#'><img src='https://www.countries-ofthe-world.com/flags-normal/flag-of-Bahamas.png'><span>India</span></a>" },
+
+
+
+];
+
+ 
+
+var office_transfat_datalist = new office_transfat_datalist(
+"office_transfat_datalist",
+"office_transfast_datalist-input",
+"office_transfast_datalist-ul",
+data);
+
+office_transfat_datalist.create();
+office_transfat_datalist.addListeners(office_transfat_datalist);
+
+
+
+  /* script for close dropdown box at click outside */
+    $(document).click(function(){
+     $('#office_transfat_datalist').removeClass('active');
+     
+     $('#office_transfast_datalist-input').val($('#selectedCountry').val());
+    });
+
+    $("#office_transfat_datalist").click(function(e){
+      e.stopPropagation();
+    });
+
+    /* script for close dropdown box at click outside */
+
+</script>
+
+<script>
+    $.fn.textWidth = function(text, font) {
+    
+    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+    
+    $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+    
+    return $.fn.textWidth.fakeEl.width();
+};
+
+$('.width-dynamic').on('input', function() {
+
+    var inputWidth = $(this).textWidth();
+   
+    $(this).css({
+        width: inputWidth
+    })
+}).trigger('input');
+
+
+function inputWidth(elem, minW, maxW) {
+    elem = $(this);
+    console.log(elem)
+}
+
+var targetElem = $('.width-dynamic');
+
+inputWidth(targetElem);
+
+$('ul').on('click', 'li', function() {
+    $("#office_transfast_datalist-input , #selectedCountry").css("width",$(this).get_country_width()) 
+});
+
+
+$(document).ready(function() 
+ {
+   $.fn.get_country_width = function(text, font) {
+    
+        if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+        
+        $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || $("#office_transfast_datalist-input").css('font'));
+        
+        return $.fn.textWidth.fakeEl.width();
+    };
+
+    $('#office_transfast_datalist-input').on('click', function() { 
+        $("#office_transfast_datalist-input , #selectedCountry").css("width",324)
+    })
+
+
+
+ });
+
+
+
+</script>
+</html>
